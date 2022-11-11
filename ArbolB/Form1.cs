@@ -14,10 +14,12 @@ namespace ArbolB
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
                 txtMostrar.Text = arbolb.Mostrar();
+                txtInsertar.Text = "";
             }
             catch (Exception)
             {
                 MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros", "ERROR DE INSERCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtInsertar.Text = "";
             }
             
         }
@@ -32,11 +34,12 @@ namespace ArbolB
                 else
                     MessageBox.Show("La clave no se encuntra", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMostrar.Text = arbolb.Mostrar();
+                txtBuscar.Text = "";
             }
             catch (Exception)
             {
                 MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros", "ERROR AL BUSCAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                txtBuscar.Text = "";
             }
 
         }
@@ -48,11 +51,12 @@ namespace ArbolB
                 txtMostrar.Text = "";
                 arbolb.Borrar(Int32.Parse(txtEliminar.Text));
                 txtMostrar.Text = arbolb.Mostrar();
+                txtEliminar.Text = "";
             }
             catch (Exception)
             {
                 MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros", "ERROR AL ELIMINAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                txtEliminar.Text = "";
             }
         }
     }
