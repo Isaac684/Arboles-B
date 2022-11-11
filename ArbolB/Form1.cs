@@ -11,6 +11,20 @@ namespace ArbolB
         {
             try
             {
+                //con esta variable se encuentra la ubicacion de documentos del sistema
+                //y se le adiciona el nombre de una carpeta llamada Arbol B
+                string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";
+
+                if (!Directory.Exists(carpeta))//se verifica si este no directorio existe
+                {
+                    Directory.CreateDirectory(carpeta);//si no existe se crea el directorio
+                }
+                else if (Directory.Exists(carpeta))//se verifica si el directorio existe osea si la carpeta existe 
+                {
+                    Directory.Delete(carpeta, true);//se elimina la carpeta, juntos con todos los archivos que contenga
+                                                    //para evitar la acumulacion de archivos basura
+                    Directory.CreateDirectory(carpeta);//Se crea de nuevo la carpeta pero esta vez vacia 
+                }
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
                 txtMostrar.Text = arbolb.Mostrar();

@@ -80,26 +80,61 @@ namespace ArbolB
 
         public String Mostrar()//metodo  que llama a metodo mostrar esto es para encapsular mas.
         {
-            arbol = Mostrar(padre, 0);
+            arbol = Mostrar(padre, 0,null);
             return arbol;
         }
 
-        private String Mostrar(Nodo p, int espaciosblancos)// recibe nodo y espacios entre nodos o paginas
+        private String Mostrar(Nodo p, int espaciosblancos, string archivo)// recibe nodo y espacios entre nodos o paginas
         {
 
             if (p != null)// si el nodo es diferente de nulo
             {
+                //Variable para conocer l direccion donde se encuentra la carpeta de documentos
+                //Y adicional se le agrega el nombre de una carpeta llamada Arbol B
+                //Y en esta carpeta se guardaran los archivos de cada pagina
+                //se guarda la direccion de esta carpeta, en la variable string carpeta
+                string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";//
+                bool esHijo = false;//variable para identificar cuando un nodo es hijo de la raiz o subhijo
+
                 mostrar = "";
+
                 int i;
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
+                {
                     mostrar += "-";//muestra espacios en blanco
+                    esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
+                }
+
+                if (esHijo == false)
+                {
+                    carpeta += "Raiz ";//se adiciona a la direccion de la carpeta un archivo si extension de nombre raiz 
+                }
 
                 for (i = 1; i <= p.numclaves; i++)// recorre las claves que hay en cada pagina
+                {
                     mostrar += p.clave[i] + "| ";//nuestra las claves que hay en una pagina padre
+                    carpeta += p.clave[i] + "_";//se adiciona al nombre raiz si es una raiz o no
+                                                //el numero de la clave para guardarlo como un archivo txt con este nombre
+
+                    if (archivo != null)//se verifica si ya existe un archivo padre para guardar en el las claves que contiene esta pagina
+                    {
+                        File.AppendAllText(archivo, p.clave[i].ToString() + "| ");//con esta linea se escribe adicionando al archivo
+                                                                                  //las claves de sus hijos ya que se escribe en una hoja padre
+                    }
+                }
                 mostrar += "\r\n";//da un espacio por página
 
+                string direccion = carpeta + ".txt";//despues de haber colocado la clave como nombre del archivo
+                                                    //se le coloca la extension que este tendra ".txt"
+                StreamWriter file = new StreamWriter(direccion);//se crea el archivo txt
+                file.Close();                                   //y a continuacion se cierra con file.close();
+
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
-                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 10);// muestra las claves de las  páginas hijas
+                {
+                    Mostrar(p.hijo[i], espaciosblancos + 10, direccion);//muestra las claves de las  páginas hijas
+                    //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
+                    //esto para poder escribirlas en ella por medio de la recursividad
+                }
                 return mostrar;
             }
             return "";
