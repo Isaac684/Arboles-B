@@ -96,7 +96,7 @@ namespace ArbolB
                 string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";//
                 bool esHijo = false;//variable para identificar cuando un nodo es hijo de la raiz o subhijo
 
-                mostrar = "";
+                //mostrar = "";
 
                 int i;
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
