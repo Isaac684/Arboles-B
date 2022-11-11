@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtInsertar = new System.Windows.Forms.TextBox();
             this.btnInsertar = new System.Windows.Forms.Button();
+            this.txtInsertar = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -55,13 +55,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insertar clave";
             // 
-            // txtInsertar
-            // 
-            this.txtInsertar.Location = new System.Drawing.Point(81, 55);
-            this.txtInsertar.Name = "txtInsertar";
-            this.txtInsertar.Size = new System.Drawing.Size(100, 30);
-            this.txtInsertar.TabIndex = 0;
-            // 
             // btnInsertar
             // 
             this.btnInsertar.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -72,6 +65,13 @@
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
+            // 
+            // txtInsertar
+            // 
+            this.txtInsertar.Location = new System.Drawing.Point(81, 55);
+            this.txtInsertar.Name = "txtInsertar";
+            this.txtInsertar.Size = new System.Drawing.Size(100, 30);
+            this.txtInsertar.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -135,6 +135,7 @@
             // 
             // txtMostrar
             // 
+            this.txtMostrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtMostrar.Location = new System.Drawing.Point(12, 239);
             this.txtMostrar.Multiline = true;
             this.txtMostrar.Name = "txtMostrar";
@@ -151,6 +152,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
