@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\ArbolB\\ArbolB.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Arboles-B\\ArbolB\\ArbolB.csproj",
       "projectName": "ArbolB",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\ArbolB\\ArbolB.csproj",
+      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Arboles-B\\ArbolB\\ArbolB.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\ArbolB\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\Arboles-B\\ArbolB\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
