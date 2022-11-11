@@ -96,7 +96,7 @@ namespace ArbolB
                 string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";//
                 bool esHijo = false;//variable para identificar cuando un nodo es hijo de la raiz o subhijo
 
-                //mostrar = "";
+                mostrar = "";
 
                 int i;
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
@@ -131,7 +131,7 @@ namespace ArbolB
 
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
-                    Mostrar(p.hijo[i], espaciosblancos + 10, direccion);//muestra las claves de las  páginas hijas
+                   mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion);//muestra las claves de las  páginas hijas
                     //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
                     //esto para poder escribirlas en ella por medio de la recursividad
                 }
