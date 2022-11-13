@@ -27,7 +27,7 @@ namespace ArbolB
                 }
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
-                txtMostrar.Text = arbolb.Mostrar();
+                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtInsertar.Text = "";
             }
             catch (Exception)
@@ -47,7 +47,7 @@ namespace ArbolB
                     MessageBox.Show("La clave " + txtBuscar.Text + " esta presente en el arbol", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("La clave no se encuntra", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtMostrar.Text = arbolb.Mostrar();
+                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtBuscar.Text = "";
             }
             catch (Exception)
@@ -64,7 +64,7 @@ namespace ArbolB
             {
                 txtMostrar.Text = "";
                 arbolb.Borrar(Int32.Parse(txtEliminar.Text));
-                txtMostrar.Text = arbolb.Mostrar();
+                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtEliminar.Text = "";
             }
             catch (Exception)

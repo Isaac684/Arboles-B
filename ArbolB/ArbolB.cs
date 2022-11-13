@@ -13,6 +13,7 @@ namespace ArbolB
         //Ceiling Devuelve el valor integral más pequeño que es mayor o igual que el número decimal especificado.
         private static readonly int MIN = (int)Math.Ceiling((double)M / 2) - 1;
         public String arbol, mostrar;
+        int x, y;
 
         private Nodo padre;//nodo padre
 
@@ -78,13 +79,13 @@ namespace ArbolB
             // Inorder(p.hijo[i]);
         }
 
-        public String Mostrar()//metodo  que llama a metodo mostrar esto es para encapsular mas.
+        public String Mostrar(ref PictureBox pictureBox, Font font)//metodo  que llama a metodo mostrar esto es para encapsular mas.
         {
-            arbol = Mostrar(padre, 0,null);
+            arbol = Mostrar(padre, 0, null, ref pictureBox, font);
             return arbol;
         }
 
-        private String Mostrar(Nodo p, int espaciosblancos, string archivo)// recibe nodo y espacios entre nodos o paginas
+        private String Mostrar(Nodo p, int espaciosblancos, string archivo, ref PictureBox pictureBox, Font font)// recibe nodo y espacios entre nodos o paginas
         {
 
             if (p != null)// si el nodo es diferente de nulo
@@ -99,10 +100,12 @@ namespace ArbolB
                 mostrar = "";
 
                 int i;
+                x = y = 30;
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
+                    y = 2;
                 }
 
                 if (esHijo == false)
@@ -115,7 +118,8 @@ namespace ArbolB
                     mostrar += p.clave[i] + "| ";//nuestra las claves que hay en una pagina padre
                     carpeta += p.clave[i] + "_";//se adiciona al nombre raiz si es una raiz o no
                                                 //el numero de la clave para guardarlo como un archivo txt con este nombre
-
+                    dibujarPaginas(p.clave[i], x, y, ref pictureBox, font);
+                    x += 30;
                     if (archivo != null)//se verifica si ya existe un archivo padre para guardar en el las claves que contiene esta pagina
                     {
                         File.AppendAllText(archivo, p.clave[i].ToString() + "| ");//con esta linea se escribe adicionando al archivo
@@ -131,13 +135,29 @@ namespace ArbolB
 
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
-                   mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion);//muestra las claves de las  páginas hijas
+                    x += 30;
+                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion, ref pictureBox, font);//muestra las claves de las  páginas hijas
+
                     //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
                     //esto para poder escribirlas en ella por medio de la recursividad
+                    //dibujarPaginas(20, 30+i, ref pictureBox, font);
+
                 }
                 return mostrar;
             }
             return "";
+        }
+
+        public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font)
+        {
+            Graphics g;
+
+            g = pictureBox.CreateGraphics();
+            Pen lapiz = new Pen(Color.Black);
+            g.FillRectangle(Brushes.AliceBlue, x, y, 15, 15);
+            g.DrawRectangle(lapiz, x, y, 15, 15);
+            Point p = new Point(x, y);
+            g.DrawString(clave.ToString(), font, Brushes.Black, p);
         }
 
         public void Insert(int x)//ingresar una clave al arbol b
