@@ -31,9 +31,9 @@ namespace ArbolB
                 txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtInsertar.Text = "";
             }
-            catch (Exception)
+            catch (Exception E)
             {
-                MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros", "ERROR DE INSERCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros " + E , "ERROR DE INSERCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtInsertar.Text = "";
             }
             

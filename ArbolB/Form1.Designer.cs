@@ -146,9 +146,9 @@
             // 
             // mostrarPaginas
             // 
-            this.mostrarPaginas.Location = new System.Drawing.Point(232, 277);
+            this.mostrarPaginas.Location = new System.Drawing.Point(249, 272);
             this.mostrarPaginas.Name = "mostrarPaginas";
-            this.mostrarPaginas.Size = new System.Drawing.Size(616, 373);
+            this.mostrarPaginas.Size = new System.Drawing.Size(818, 373);
             this.mostrarPaginas.TabIndex = 4;
             this.mostrarPaginas.TabStop = false;
             // 

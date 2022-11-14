@@ -13,7 +13,7 @@ namespace ArbolB
         //Ceiling Devuelve el valor integral más pequeño que es mayor o igual que el número decimal especificado.
         private static readonly int MIN = (int)Math.Ceiling((double)M / 2) - 1;
         public String arbol, mostrar;
-        int x, y;//variables para indicar la posicion de cada clave en las paginas
+        int x = 394, xhijo, y;//variables para indicar la posicion de cada clave en las paginas
 
         private Nodo padre;//nodo padre
 
@@ -84,11 +84,11 @@ namespace ArbolB
         {
             //se mandaron los parametros a mostrar de picturebox y font Para indicarle al codigo
             //donde dibujara los cuadrados, las claves y la fuente que tendra las claves
-            arbol = Mostrar(padre, 0, null, ref pictureBox, font);
+            arbol = Mostrar(padre, 0, null, ref pictureBox, font,x);
             return arbol;
         }
 
-        private String Mostrar(Nodo p, int espaciosblancos, string archivo, ref PictureBox pictureBox, Font font)// recibe nodo y espacios entre nodos o paginas
+        private String Mostrar(Nodo p, int espaciosblancos, string archivo, ref PictureBox pictureBox, Font font, int x)// recibe nodo y espacios entre nodos o paginas
         {
 
             if (p != null)// si el nodo es diferente de nulo
@@ -103,18 +103,21 @@ namespace ArbolB
                 mostrar = "";
 
                 int i;
-                x = 30;//valor inicial horizontanmente de la pagina raiz
+                
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
+
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
-                    y += 5;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
-                    x += 5;//si es una pagina hija aumentara su valor en x para que exista diferencia entre una y otra
+                    if (esHijo)
+                        y += 5;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
                 }
+
 
                 if (esHijo == false)
                 {
-                    carpeta += "Raiz ";//se adiciona a la direccion de la carpeta un archivo si extension de nombre raiz 
+                    carpeta += "Raiz ";//se adiciona a la direccion de la carpeta un archivo si extension de nombre raiz
+                    y = 0;
                 }
 
                 for (i = 1; i <= p.numclaves; i++)// recorre las claves que hay en cada pagina
@@ -142,7 +145,15 @@ namespace ArbolB
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
                     //y += 10;
-                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion, ref pictureBox, font);//muestra las claves de las  páginas hijas
+                    //if (p.hijo[i] != null && padre.clave[i] > p.hijo[i].clave[i])
+                    //{
+                    //    x = 0;
+                    //}
+                    //if(p.hijo[i] != null && padre.clave[i] < p.hijo[i].clave[i])
+                    //{
+                    //    x = 600;
+                    //}
+                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion, ref pictureBox, font,x);//muestra las claves de las  páginas hijas
 
                     //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
                     //esto para poder escribirlas en ella por medio de la recursividad
@@ -152,7 +163,7 @@ namespace ArbolB
             return "";
         }
 
-        public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font)
+        public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font) 
         {
             Graphics g;
             g = pictureBox.CreateGraphics();
