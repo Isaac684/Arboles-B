@@ -27,6 +27,7 @@ namespace ArbolB
                 }
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
+                mostrarPaginas.Refresh();
                 txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtInsertar.Text = "";
             }
@@ -64,6 +65,7 @@ namespace ArbolB
             {
                 txtMostrar.Text = "";
                 arbolb.Borrar(Int32.Parse(txtEliminar.Text));
+                mostrarPaginas.Refresh();
                 txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtEliminar.Text = "";
             }
@@ -72,6 +74,11 @@ namespace ArbolB
                 MessageBox.Show("El formato del dato es incorrecto \n ingrese numeros enteros", "ERROR AL ELIMINAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEliminar.Text = "";
             }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            //arbolb.dibujarPaginas(null,30,30,this.Font);
         }
     }
 }

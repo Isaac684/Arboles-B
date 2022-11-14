@@ -20,6 +20,7 @@ namespace ArbolB
         public ArbolB()//contructor
         {
             padre = null;//nodo padre inicializa en null
+            //y = 30;
         }
 
         public bool Buscar(int x)//metodo que busca  una clave entera en el árbol
@@ -100,12 +101,13 @@ namespace ArbolB
                 mostrar = "";
 
                 int i;
-                x = y = 30;
+                x = 30;
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
-                    y = 2;
+                    y += 5;
+                    x += 5;
                 }
 
                 if (esHijo == false)
@@ -119,11 +121,12 @@ namespace ArbolB
                     carpeta += p.clave[i] + "_";//se adiciona al nombre raiz si es una raiz o no
                                                 //el numero de la clave para guardarlo como un archivo txt con este nombre
                     dibujarPaginas(p.clave[i], x, y, ref pictureBox, font);
-                    x += 30;
+                    x += 15;
+                    //y += 20;
                     if (archivo != null)//se verifica si ya existe un archivo padre para guardar en el las claves que contiene esta pagina
                     {
                         File.AppendAllText(archivo, p.clave[i].ToString() + "| ");//con esta linea se escribe adicionando al archivo
-                                                                                  //las claves de sus hijos ya que se escribe en una hoja padre
+                                                                                 //las claves de sus hijos ya que se escribe en una hoja padre
                     }
                 }
                 mostrar += "\r\n";//da un espacio por página
@@ -135,13 +138,11 @@ namespace ArbolB
 
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
-                    x += 30;
+                    //y += 10;
                     mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion, ref pictureBox, font);//muestra las claves de las  páginas hijas
 
                     //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
                     //esto para poder escribirlas en ella por medio de la recursividad
-                    //dibujarPaginas(20, 30+i, ref pictureBox, font);
-
                 }
                 return mostrar;
             }
@@ -151,7 +152,7 @@ namespace ArbolB
         public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font)
         {
             Graphics g;
-
+            pictureBox.BackgroundImage = null;
             g = pictureBox.CreateGraphics();
             Pen lapiz = new Pen(Color.Black);
             g.FillRectangle(Brushes.AliceBlue, x, y, 15, 15);
@@ -226,7 +227,7 @@ namespace ArbolB
             //(i=3; 3>3;
             for (int i = p.numclaves; i > n; i--)//recorre la pagina de derecha a izquierda
             {
-                //p.clave[4]=p.clave[3]
+                //p.clave[4]=p.clave[3] 
                 //
                 p.clave[i + 1] = p.clave[i];//mueve las claves a la izquierda
                 p.hijo[i + 1] = p.hijo[i];
