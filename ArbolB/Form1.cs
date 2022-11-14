@@ -27,7 +27,7 @@ namespace ArbolB
                 }
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
-                mostrarPaginas.Refresh();
+                mostrarPaginas.Refresh();//con esta propiedad se limpia el picture box
                 txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtInsertar.Text = "";
             }
@@ -65,7 +65,7 @@ namespace ArbolB
             {
                 txtMostrar.Text = "";
                 arbolb.Borrar(Int32.Parse(txtEliminar.Text));
-                mostrarPaginas.Refresh();
+                mostrarPaginas.Refresh();//con esta propiedad se limpia el picture box
                 txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
                 txtEliminar.Text = "";
             }

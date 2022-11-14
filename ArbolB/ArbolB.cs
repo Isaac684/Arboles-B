@@ -13,7 +13,7 @@ namespace ArbolB
         //Ceiling Devuelve el valor integral más pequeño que es mayor o igual que el número decimal especificado.
         private static readonly int MIN = (int)Math.Ceiling((double)M / 2) - 1;
         public String arbol, mostrar;
-        int x, y;
+        int x, y;//variables para indicar la posicion de cada clave en las paginas
 
         private Nodo padre;//nodo padre
 
@@ -82,6 +82,8 @@ namespace ArbolB
 
         public String Mostrar(ref PictureBox pictureBox, Font font)//metodo  que llama a metodo mostrar esto es para encapsular mas.
         {
+            //se mandaron los parametros a mostrar de picturebox y font Para indicarle al codigo
+            //donde dibujara los cuadrados, las claves y la fuente que tendra las claves
             arbol = Mostrar(padre, 0, null, ref pictureBox, font);
             return arbol;
         }
@@ -101,13 +103,13 @@ namespace ArbolB
                 mostrar = "";
 
                 int i;
-                x = 30;
+                x = 30;//valor inicial horizontanmente de la pagina raiz
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
-                    y += 5;
-                    x += 5;
+                    y += 5;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
+                    x += 5;//si es una pagina hija aumentara su valor en x para que exista diferencia entre una y otra
                 }
 
                 if (esHijo == false)
@@ -120,8 +122,9 @@ namespace ArbolB
                     mostrar += p.clave[i] + "| ";//nuestra las claves que hay en una pagina padre
                     carpeta += p.clave[i] + "_";//se adiciona al nombre raiz si es una raiz o no
                                                 //el numero de la clave para guardarlo como un archivo txt con este nombre
-                    dibujarPaginas(p.clave[i], x, y, ref pictureBox, font);
-                    x += 15;
+                    dibujarPaginas(p.clave[i], x, y, ref pictureBox, font);//se manda el valor de la clave y donde se dibujara
+                    //este metodo se vuelve recursivo si tiene vlaves hijas y repite el mismo procedimiento
+                    x += 15;//se coloca a la derecha de cada clave de una misma pagina por eso se desplaza 15px a la derecha
                     //y += 20;
                     if (archivo != null)//se verifica si ya existe un archivo padre para guardar en el las claves que contiene esta pagina
                     {
@@ -152,7 +155,6 @@ namespace ArbolB
         public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font)
         {
             Graphics g;
-            pictureBox.BackgroundImage = null;
             g = pictureBox.CreateGraphics();
             Pen lapiz = new Pen(Color.Black);
             g.FillRectangle(Brushes.AliceBlue, x, y, 15, 15);
