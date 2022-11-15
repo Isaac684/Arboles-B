@@ -106,7 +106,6 @@ namespace ArbolB
 
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
-
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
                     if (esHijo)
@@ -114,10 +113,10 @@ namespace ArbolB
                 }
 
 
-                if (esHijo == false)
+                if (esHijo == false)//si no es un hijo entonces es la raiz
                 {
                     carpeta += "Raiz ";//se adiciona a la direccion de la carpeta un archivo si extension de nombre raiz
-                    y = 0;
+                    y = 0;//muestra la raiz al inicio del picture box
                 }
 
                 for (i = 1; i <= p.numclaves; i++)// recorre las claves que hay en cada pagina
@@ -156,28 +155,26 @@ namespace ArbolB
                         xhijo = 600;
                     }
                     mostrar += Mostrar(p.hijo[i], espaciosblancos + 1, direccion, ref pictureBox, font, xhijo);//muestra las claves de las  páginas hijas
-
-                    //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
-                    //esto para poder escribirlas en ella por medio de la recursividad
+                                                                                                               //si es que el directorio tiene y se manda el nombre
+                                                                                                               //del archivo padre donde se encuentran las claves
+                                                                                                               //esto para poder escribirlas en ella por medio de la recursividad
                 }
-
-
-
-
                 return mostrar;
             }
             return "";
         }
 
+        //Funcion para dibujar las paginas
         public void dibujarPaginas(int clave, int x, int y, ref PictureBox pictureBox, Font font) 
         {
-            Graphics g;
-            g = pictureBox.CreateGraphics();
-            Pen lapiz = new Pen(Color.Black);
-            g.FillRectangle(Brushes.AliceBlue, x, y, 15, 15);
-            g.DrawRectangle(lapiz, x, y, 15, 15);
-            Point p = new Point(x, y);
-            g.DrawString(clave.ToString(), font, Brushes.Black, p);
+            Graphics g;//definicion de un objeto tipo Graphics
+            g = pictureBox.CreateGraphics();//A este objeto Graphics se le asigna el pictureBox
+                                            //para decirle donde debe dibujar los objetos
+            Pen lapiz = new Pen(Color.Black);//se crea un lapiz de color negro para trazar el borde de la pagina
+            g.FillRectangle(Brushes.LightGoldenrodYellow, x, y, 15, 15);//se crea un cuadrado con relleno sin bordes
+            g.DrawRectangle(lapiz, x, y, 15, 15);//se dibuja el cuadrado sin relleno solo los bordes negros
+            Point p = new Point(x, y);//se crea un punto en coordenadas x,y para indicar donde dibujarlo
+            g.DrawString(clave.ToString(), font, Brushes.Black, p);//mandamos los parametros para dibujar la clave en las paginas
         }
 
         public void Insert(int x)//ingresar una clave al arbol b

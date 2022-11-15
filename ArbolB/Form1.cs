@@ -11,11 +11,11 @@ namespace ArbolB
         {
             try
             {
-                //con esta variable se encuentra la ubicacion de documentos del sistema
+                //con esta variable se encuentra la ubicacion de documentos del ususario
                 //y se le adiciona el nombre de una carpeta llamada Arbol B
                 string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";
 
-                if (!Directory.Exists(carpeta))//se verifica si este no directorio existe
+                if (!Directory.Exists(carpeta))//se verifica si este directorio existe
                 {
                     Directory.CreateDirectory(carpeta);//si no existe se crea el directorio
                 }
@@ -23,12 +23,13 @@ namespace ArbolB
                 {
                     Directory.Delete(carpeta, true);//se elimina la carpeta, juntos con todos los archivos que contenga
                                                     //para evitar la acumulacion de archivos basura
-                    Directory.CreateDirectory(carpeta);//Se crea de nuevo la carpeta pero esta vez vacia 
+                    Directory.CreateDirectory(carpeta);//Se crea de nuevo la carpeta vacia
                 }
                 txtMostrar.Text = "";
                 arbolb.Insert(Int32.Parse(txtInsertar.Text));
                 mostrarPaginas.Refresh();//con esta propiedad se limpia el picture box
-                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
+                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);//se manda como referencia
+                                                                                //el pictures box y la fuente actual del sistema
                 txtInsertar.Text = "";
             }
             catch (Exception E)
@@ -63,10 +64,25 @@ namespace ArbolB
         {
             try
             {
+                //con esta variable se encuentra la ubicacion de documentos del ususario
+                //y se le adiciona el nombre de una carpeta llamada Arbol B
+                string carpeta = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/Arbol B/";
+
+                if (!Directory.Exists(carpeta))//se verifica si este directorio existe
+                {
+                    Directory.CreateDirectory(carpeta);//si no existe se crea el directorio
+                }
+                else if (Directory.Exists(carpeta))//se verifica si el directorio existe osea si la carpeta existe 
+                {
+                    Directory.Delete(carpeta, true);//se elimina la carpeta, juntos con todos los archivos que contenga
+                                                    //para evitar la acumulacion de archivos basura
+                    Directory.CreateDirectory(carpeta);//Se crea de nuevo la carpeta vacia
+                }
                 txtMostrar.Text = "";
                 arbolb.Borrar(Int32.Parse(txtEliminar.Text));
                 mostrarPaginas.Refresh();//con esta propiedad se limpia el picture box
-                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);
+                txtMostrar.Text = arbolb.Mostrar(ref mostrarPaginas, this.Font);//se manda como referencia
+                                                                 //el pictures box y la fuente actual del sistema
                 txtEliminar.Text = "";
             }
             catch (Exception)
