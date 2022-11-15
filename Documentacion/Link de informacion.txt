@@ -1,0 +1,9 @@
+https://www.youtube.com/watch?v=cLq3YdORfXs //video explicativo de arboles b
+https://www.youtube.com/watch?v=7w-4h-XK7wc&t=22s //video explicativo de arboles b
+https://www.youtube.com/watch?v=NwA-m82-w5E //video explicativo de arboles b
+https://decodigo.com/c-sharp-crear-archivos-de-texto //codigo de como escribir en archivos en c#
+https://www.youtube.com/watch?v=UneNyEshsXU //video explicativo de como escribir en archivos en c#
+https://www.youtube.com/watch?v=CQH_EXjYSh4 //Funcion Graphics y PictureBox
+https://www.youtube.com/watch?v=O0uo5pa9bmo&list=PLrP3CuNSFpYZb3apQNfvVhSD7yO7a8t49&index=19 //explicaion Metodos Fill y SolidBrush
+https://www.youtube.com/watch?v=vtsKQ7Z42II&t=95s //Dibujar una cadena envuelta en WinForms
+https://www.youtube.com/watch?v=iozCP3Npz8s&t=4s //video de implementacion de la clase picture box  y Graphics          
