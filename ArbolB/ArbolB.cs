@@ -103,14 +103,14 @@ namespace ArbolB
                 mostrar = "";
 
                 int i;
-                
+
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
 
                     mostrar += "-";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
                     if (esHijo)
-                        y += 5;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
+                        y += 2;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
                 }
 
 
@@ -124,15 +124,17 @@ namespace ArbolB
                 {
                     mostrar += p.clave[i] + "| ";//nuestra las claves que hay en una pagina padre
                     carpeta += p.clave[i] + "_";//se adiciona al nombre raiz si es una raiz o no
-                                                //el numero de la clave para guardarlo como un archivo txt con este nombre
+
+                    //modificar el dibujar paginas
                     dibujarPaginas(p.clave[i], x, y, ref pictureBox, font);//se manda el valor de la clave y donde se dibujara
+
                     //este metodo se vuelve recursivo si tiene vlaves hijas y repite el mismo procedimiento
                     x += 15;//se coloca a la derecha de cada clave de una misma pagina por eso se desplaza 15px a la derecha
                     //y += 20;
                     if (archivo != null)//se verifica si ya existe un archivo padre para guardar en el las claves que contiene esta pagina
                     {
                         File.AppendAllText(archivo, p.clave[i].ToString() + "| ");//con esta linea se escribe adicionando al archivo
-                                                                                 //las claves de sus hijos ya que se escribe en una hoja padre
+                                                                                  //las claves de sus hijos ya que se escribe en una hoja padre
                     }
                 }
                 mostrar += "\r\n";//da un espacio por página
@@ -144,20 +146,24 @@ namespace ArbolB
 
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
-                    //y += 10;
-                    //if (p.hijo[i] != null && padre.clave[i] > p.hijo[i].clave[i])
-                    //{
-                    //    x = 0;
-                    //}
-                    //if(p.hijo[i] != null && padre.clave[i] < p.hijo[i].clave[i])
-                    //{
-                    //    x = 600;
-                    //}
-                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 10, direccion, ref pictureBox, font,x);//muestra las claves de las  páginas hijas
+                    y += 10;
+                    if (p.hijo[i] != null && padre.clave[i] > p.hijo[i].clave[i])
+                    {
+                        xhijo = 600 / 2;
+                    }
+                    if (p.hijo[i] != null && padre.clave[i] < p.hijo[i].clave[i])
+                    {
+                        xhijo = 600;
+                    }
+                    mostrar += Mostrar(p.hijo[i], espaciosblancos + 1, direccion, ref pictureBox, font, xhijo);//muestra las claves de las  páginas hijas
 
                     //si es que el directorio tiene y se manda el nombre del archivo padre donde se encuentran las claves
                     //esto para poder escribirlas en ella por medio de la recursividad
                 }
+
+
+
+
                 return mostrar;
             }
             return "";
