@@ -1,0 +1,3 @@
+https://sites.google.com/a/espe.edu.ec/programacion-ii/home/arboles/arbol-b-1 ---Principalmente para profundizar conceptos como de insercion y eliminacion ya que el libro se quedaba un poco corto
+https://www.youtube.com/watch?v=OSTQpYHjhps  --Recopilacion de otra forma de poder mostrar los datos 
+https://www.youtube.com/watch?v=hcbNpTpdv8A ---Video explicativo para crear figuras de otra forma que la mostrada en clase
