@@ -138,17 +138,18 @@
             // txtMostrar
             // 
             this.txtMostrar.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtMostrar.Location = new System.Drawing.Point(12, 239);
+            this.txtMostrar.Location = new System.Drawing.Point(12, 206);
             this.txtMostrar.Multiline = true;
             this.txtMostrar.Name = "txtMostrar";
-            this.txtMostrar.Size = new System.Drawing.Size(1054, 710);
+            this.txtMostrar.Size = new System.Drawing.Size(1155, 743);
             this.txtMostrar.TabIndex = 3;
+            this.txtMostrar.TextChanged += new System.EventHandler(this.txtMostrar_TextChanged);
             // 
             // mostrarPaginas
             // 
-            this.mostrarPaginas.Location = new System.Drawing.Point(249, 272);
+            this.mostrarPaginas.Location = new System.Drawing.Point(304, 228);
             this.mostrarPaginas.Name = "mostrarPaginas";
-            this.mostrarPaginas.Size = new System.Drawing.Size(818, 373);
+            this.mostrarPaginas.Size = new System.Drawing.Size(846, 408);
             this.mostrarPaginas.TabIndex = 4;
             this.mostrarPaginas.TabStop = false;
             // 
@@ -156,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 749);
+            this.ClientSize = new System.Drawing.Size(1179, 811);
             this.Controls.Add(this.mostrarPaginas);
             this.Controls.Add(this.txtMostrar);
             this.Controls.Add(this.groupBox2);

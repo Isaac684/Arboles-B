@@ -106,7 +106,7 @@ namespace ArbolB
 
                 for (i = 1; i <= espaciosblancos; i++)// dejar espacios en blanco
                 {
-                    mostrar += "-";//muestra espacios en blanco
+                    mostrar += "|";//muestra espacios en blanco
                     esHijo = true;//si se muestran espacios es porque este nodo es un hijo de raiz
                     if (esHijo)
                         y += 2;//si es una pagina hija aumentara su valor en Y para quedar separada una pagina hija de otra
@@ -146,14 +146,14 @@ namespace ArbolB
                 for (i = 0; i <= p.numclaves; i++)//este for recorre las paginas hijas para mostrar las claves
                 {
                     y += 10;
-                    if (p.hijo[i] != null && padre.clave[i] > p.hijo[i].clave[i])
-                    {
-                        xhijo = 600 / 2;
-                    }
-                    if (p.hijo[i] != null && padre.clave[i] < p.hijo[i].clave[i])
-                    {
-                        xhijo = 600;
-                    }
+                    //if (p.hijo[i] != null && padre.clave[i] > p.hijo[i].clave[i])
+                    //{
+                    //    xhijo = 600 / 2;
+                    //}
+                    //if (p.hijo[i] != null && padre.clave[i] < p.hijo[i].clave[i])
+                    //{
+                    //    xhijo = 600;
+                    //}
                     mostrar += Mostrar(p.hijo[i], espaciosblancos + 1, direccion, ref pictureBox, font, xhijo);//muestra las claves de las  páginas hijas
                                                                                                                //si es que el directorio tiene y se manda el nombre
                                                                                                                //del archivo padre donde se encuentran las claves

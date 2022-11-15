@@ -96,5 +96,10 @@ namespace ArbolB
         {
             //arbolb.dibujarPaginas(null,30,30,this.Font);
         }
+
+        private void txtMostrar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
