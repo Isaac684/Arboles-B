@@ -1,0 +1,68 @@
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\bin\Debug\net6.0-windows\ArbolB.exe
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\bin\Debug\net6.0-windows\ArbolB.deps.json
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\bin\Debug\net6.0-windows\ArbolB.runtimeconfig.json
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\bin\Debug\net6.0-windows\ArbolB.dll
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\bin\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.AssemblyReference.cache
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.Form1.resources
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.GenerateResource.cache
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfoInputs.cache
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfo.cs
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.dll
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\refint\ArbolB.dll
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ArbolB.genruntimeconfig.cache
+C:\Users\Diego\Source\Repos\Arboles-B\ArbolB\obj\Debug\net6.0-windows\ref\ArbolB.dll
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.exe
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.deps.json
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.runtimeconfig.json
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.dll
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.AssemblyReference.cache
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.Form1.resources
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.GenerateResource.cache
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfoInputs.cache
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfo.cs
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.dll
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\refint\ArbolB.dll
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.genruntimeconfig.cache
+C:\Users\angel\3D Objects\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ref\ArbolB.dll
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.exe
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.deps.json
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.runtimeconfig.json
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.dll
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\bin\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.Form1.resources
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfoInputs.cache
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfo.cs
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.dll
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\refint\ArbolB.dll
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ArbolB.genruntimeconfig.cache
+C:\Users\Admin\Downloads\ArbolB (2)\ArbolB (2)\ArbolB\obj\Debug\net6.0-windows\ref\ArbolB.dll
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\bin\Debug\net6.0-windows\ArbolB.exe
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\bin\Debug\net6.0-windows\ArbolB.deps.json
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\bin\Debug\net6.0-windows\ArbolB.runtimeconfig.json
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\bin\Debug\net6.0-windows\ArbolB.dll
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\bin\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.AssemblyReference.cache
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.Form1.resources
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.GenerateResource.cache
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfoInputs.cache
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.AssemblyInfo.cs
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.csproj.CoreCompileInputs.cache
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.dll
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\refint\ArbolB.dll
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.pdb
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ArbolB.genruntimeconfig.cache
+C:\Users\angel\Downloads\ArbolBCasiCompleto\ArbolB\obj\Debug\net6.0-windows\ref\ArbolB.dll
